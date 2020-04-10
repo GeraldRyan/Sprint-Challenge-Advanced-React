@@ -38,8 +38,9 @@ export default class App extends React.Component
     return (
       <div>
 
-
-
+      {this.state.playerData.map(item =>{
+        return (JSON.stringify(item))
+      })}
 
       </div>
     )
