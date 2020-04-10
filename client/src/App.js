@@ -11,18 +11,37 @@ export default class App extends React.Component
   {
     super()
     this.state = {
-      "name": "",
-      "country": "",
-      "searches": 1,
-      "id": 0
+      playerData: []
     }
+    // this.state = {
+    //   "name": "",
+    //   "country": "",
+    //   "searches": 1,
+    //   "id": 0
+    // }
   }
 
+  componentDidMount(){
+    const url = "http://localhost:5000/api/players"
+    axios.get(url)
+    .then(response =>{
+      this.setState({
+        playerData: response.data
+      })
+      console.log(this.state.playerData)
+    })
+    .catch("You caught me")
+  }
 
   render()
   {
     return (
-      <div>Hello Boys and Girls</div>
+      <div>
+
+
+
+
+      </div>
     )
   }
 
