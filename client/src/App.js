@@ -44,7 +44,11 @@ export default class App extends React.Component
   {
     return (
       <div>
-
+      <button class>Toggle Dark Mode</button>
+      <br/>
+      <br/>
+      <br/>
+      <h1>Player Data</h1>
         {this.state.playerData.map(item =>
         {
           return (
