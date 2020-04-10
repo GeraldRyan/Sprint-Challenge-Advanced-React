@@ -1,15 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
-function App() {
 
-  const url = "http://localhost:5000/api/players"
-  return (
-    <div className="App">
 
-    </div>
-  );
+
+export default class App extends React.Component
+{
+  constructor()
+  {
+    super()
+    this.state = {
+      "name": "",
+      "country": "",
+      "searches": 1,
+      "id": 0
+    }
+  }
+
+
+  render()
+  {
+    return (
+      <div>Hello Boys and Girls</div>
+    )
+  }
+
+
+
 }
 
-export default App;
+
+
+
+
+
+
+// Legacy Backup
+// function App() {
+
+//   const url = "http://localhost:5000/api/players"
+//   return (
+//     <div className="App">
+
+//     </div>
+//   );
+// }
+
+// export default App;
