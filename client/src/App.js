@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import Navbar  from './components/Navbar'
 import
 {
   Card, CardImg, CardText, CardBody,
@@ -18,12 +19,6 @@ export default class App extends React.Component
     this.state = {
       playerData: []
     }
-    // this.state = {
-    //   "name": "",
-    //   "country": "",
-    //   "searches": 1,
-    //   "id": 0
-    // }
   }
 
   componentDidMount()
@@ -40,15 +35,22 @@ export default class App extends React.Component
       .catch("You caught me")
   }
 
+
+
+
   render()
   {
+
+
+
+
+
     return (
       <div>
-      <button class>Toggle Dark Mode</button>
-      <br/>
-      <br/>
-      <br/>
-      <h1>Player Data</h1>
+        <Navbar></Navbar>
+        <br />
+        <br />
+        <h1>Player Data</h1>
         {this.state.playerData.map(item =>
         {
           return (
