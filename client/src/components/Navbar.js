@@ -23,7 +23,8 @@ const Navbar = () =>
       <br />
       <button>Fetch Data</button>
       <br />
-      <input type="text" placeholder="filter player" value={player}/>
+      <input id="filter" type="text" placeholder="filter player" />
+      <label htmlFor="filter">Filter</label>
     </div>
   )
 }
