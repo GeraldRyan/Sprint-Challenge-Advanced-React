@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import Navbar  from './components/Navbar'
+import Navbar from './components/Navbar'
 import
 {
   Card, CardImg, CardText, CardBody,
@@ -40,47 +40,41 @@ export default class App extends React.Component
 
   render()
   {
-
-
-
-
-
     return (
       <div>
         <Navbar></Navbar>
         <br />
         <br />
-        <h1>Player Data</h1>
-        {this.state.playerData.map(item =>
-        {
-          return (
-            <Card >
-              <CardBody>
-                <CardTitle>
-                  {`Player Name: ${item.name}`}
-                </CardTitle>
+        <div id="cards" class='cards hidden'>
+          <h1>Player Data</h1>
+          {this.state.playerData.map(item =>
+          {
+            return (
+              <Card >
+                <CardBody>
+                  <CardTitle>
+                    {`Player Name: ${item.name}`}
+                  </CardTitle>
 
-                <CardSubtitle>
-                  {`Country: ${item.country}`}
-                </CardSubtitle>
-                <CardText>
-                  {`searches: ${item.searches}`}
+                  <CardSubtitle>
+                    {`Country: ${item.country}`}
+                  </CardSubtitle>
+                  <CardText>
+                    {`searches: ${item.searches}`}
 
-                  {item.searches}
-                  <br />
+                    {item.searches}
+                    <br />
 
-                  {`id: ${item.id}`}
-                  {item.id}
+                    {`id: ${item.id}`}
+                    {item.id}
 
-                </CardText>
+                  </CardText>
+                </CardBody>
+              </Card>
 
-
-                {/* {JSON.stringify(item)} */}
-              </CardBody>
-            </Card>
-          )
-        })}
-
+            )
+          })}
+        </div>
       </div>
     )
   }

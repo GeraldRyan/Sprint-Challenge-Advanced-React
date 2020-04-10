@@ -49,3 +49,7 @@
   background-color:rgb(46, 46, 46);
   color:rgb(216, 216, 216);
 }
+
+.hidden{
+  display:none;
+}
