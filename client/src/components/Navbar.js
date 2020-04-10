@@ -16,12 +16,14 @@ const Navbar = () =>
       alert("Now, fulfill your destiny")
     }
   }
+  const player=""
   return (
     <div>
       <button onClick={toggleMode}> Toggle Dark Mode</button>
       <br />
       <button>Fetch Data</button>
       <br />
+      <input type="text" placeholder="filter player" value={player}/>
     </div>
   )
 }
