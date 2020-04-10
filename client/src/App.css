@@ -37,3 +37,14 @@ body{
     transform: rotate(360deg);
   }
 }
+
+.card-body{
+  background-color:rgb(58, 109, 58);
+  /* margin:auto; */
+  max-width: 500px;
+  /* font-weight:bold; */
+}
+
+.card-title{
+  font-size: 2rem;
+}

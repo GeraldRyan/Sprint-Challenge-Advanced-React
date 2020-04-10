@@ -1,6 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import
+{
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 
 
 
@@ -21,16 +26,18 @@ export default class App extends React.Component
     // }
   }
 
-  componentDidMount(){
+  componentDidMount()
+  {
     const url = "http://localhost:5000/api/players"
     axios.get(url)
-    .then(response =>{
-      this.setState({
-        playerData: response.data
+      .then(response =>
+      {
+        this.setState({
+          playerData: response.data
+        })
+        console.log(this.state.playerData)
       })
-      console.log(this.state.playerData)
-    })
-    .catch("You caught me")
+      .catch("You caught me")
   }
 
   render()
@@ -38,14 +45,35 @@ export default class App extends React.Component
     return (
       <div>
 
-      {this.state.playerData.map(item =>{
-        return (
-          <div>
-          
-          {JSON.stringify(item)}
-          </div>
+        {this.state.playerData.map(item =>
+        {
+          return (
+            <Card >
+              <CardBody>
+                <CardTitle>
+                  {`Player Name: ${item.name}`}
+                </CardTitle>
+
+                <CardSubtitle>
+                  {`Country: ${item.country}`}
+                </CardSubtitle>
+                <CardText>
+                  {`searches: ${item.searches}`}
+
+                  {item.searches}
+                  <br />
+
+                  {`id: ${item.id}`}
+                  {item.id}
+
+                </CardText>
+
+
+                {/* {JSON.stringify(item)} */}
+              </CardBody>
+            </Card>
           )
-      })}
+        })}
 
       </div>
     )
